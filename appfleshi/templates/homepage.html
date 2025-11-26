@@ -11,17 +11,19 @@
 {% block body %}
 <body>
         <h1>Fléshi</h1>
-        <form method="POST">
-        <!--token de seguranca padrao do formulario-->
-        {{ form.csrf_token }}
-            {{ form.email.label() }}
-            {{ form.email() }}
+        {% block form %}
+            <form method="POST">
+            <!--token de seguranca padrao do formulario-->
+            {{ form.csrf_token }}
+                {{ form.email.label() }}
+                {{ form.email() }}
 
-            {{ form.password.label() }}
-            {{ form.password() }}
+                {{ form.password.label() }}
+                {{ form.password() }}
 
-            {{ form.submit() }}
-        </form>
+                {{ form.submit() }}
+            </form>
+        {% endblock %}
 </body>
 {% endblock %}
 </html>
