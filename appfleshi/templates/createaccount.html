@@ -5,7 +5,7 @@
 {% endblock %}
 
 {% block form %}
-<form method="POST">
+<form method="post">
     {{ form.csrf_token }}
     {{ form.email.label() }}
     {{ form.email() }}
@@ -19,6 +19,6 @@
     {{ form.confirm_password.label() }}
     {{ form.confirm_password() }}
 
-    {{ form.submit }}
+    {{ form.submit() }}
 </form>
 {% endblock %}
